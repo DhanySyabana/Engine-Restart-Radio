@@ -62,9 +62,19 @@ TELEGRAM_CONFIG = {
     "TOPIC_ID": 3042
 }
 
+# MongoDB Configuration
+MONGO_CONFIG = {
+    "uri": "mongodb://localhost:27017",
+    "database": "dl_streamings",
+    "collection_streams": "streams"
+}
+
 # File checking parameters
 CHECK_PARAMETERS = {
-    "directory": "/home/kuradmin/storage/radio_list",
+    # "directory": "/home/kuradmin/storage/radio_list",
+    "directory": r"D:\Medmon\Raw-data\RADIO",
     "time_limit": 1800,  # 30 minutes in seconds
-    "min_files": 2
+    "min_files": 2,
+    "max_age_days": 2,
+    "log_level": "INFO"
 }
